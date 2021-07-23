@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport"content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster+Two&family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+<style>
+  * {box-sizing: border-box}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+   .header{
+  background-color:#fda226;
+   text-align:center;
+  font-size:20px;
+  font-family: 'Anton', sans-serif;
+      color: #77461b;
+ }
+
+
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+ 
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+
+     .slides {display: none}
+.slideshow {
+
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+ color:#76d250;
+   padding-top:20%;
+  cursor: pointer;
+  font-size:40px; 
+ 
+}
+
+@media screen and (max-width: 320px) {
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  color:#76d250;
+   padding-top:40%;
+  cursor: pointer;
+  font-size:40px; 
+ 
+}
+}
+  
+
+
+
+.next {
+  right: 0;
+}
+
+.fade {
+	
+  animation-name: fade;
+  animation-duration: 1s;
+
+
+}
+
+
+@keyframes fade {
+  from {
+	opacity: .2;
+	
+	}
+  
+  to {
+	opacity: 2;
+     }
+
+}
+    
+
+  .col-s-4 img{
+  height:auto;
+  width:100%;
+  padding:10px;
+  
+}
+ .col-s-4 col-4{
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size:10px;
+}
+ .col-s-8{
+  padding:10px;
+ font-family: 'Archivo Narrow', sans-serif;
+  font-size:20px;
+}
+.abouth1{
+   text-align:center;
+font-family: 'Merriweather Sans', sans-serif;
+  color:#945f28;
+}
+
+  
+p {
+    color: #af7a33;
+   font-size:21px;
+}
+h4 {
+    color:#84520f;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size:22px;
+}
+ 
+ h5 {
+ text-align:center;
+color: #c17d20;
+  font-size:22px;
+}
+h3 {
+    text-align: center;
+     color:#a0802a;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-size:30px;
+}
+ 
+  label {
+    font-size: 20px;
+    color:#d2af2f;
+     font-family: 'Merriweather Sans', sans-serif;
+}
+
+.coronaform{
+  text-align:center;
+}
+  input[type="text"] {
+    width: 50%;
+    padding: 14px;
+   outline:none;
+  
+    border: 1px solid #40ab69;
+}
+  
+  input[type="password"] {
+    width: 50%;
+    padding: 14px;
+   outline:none;
+  
+    border: 1px solid #40ab69;
+}
+#submit{
+   border: 1px solid green;
+    outline: none;
+       padding: 15px 20px;
+    background: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1s;
+    color: #c1875e;
+   margin:10px;
+}
+
+input {
+  text-align: center;
+  width: 60px;
+}
+
+
+textarea {
+    outline: none;
+    border: 1px solid #ff8d00;
+   width:100%;
+   height:auto;
+   background-color:#865f1f;
+
+}
+
+   i.fa.fa-facebook {
+    font-size:50px;
+       color: #bd8948;
+}
+  i.fa.fa-twitter-square {
+    font-size: 50px;
+       color: #bd8948;
+}
+
+i.fa.fa-instagram {
+    font-size: 50px;
+       color: #bd8948;
+}
+
+.row1{
+  bakground-color:green;
+}
+button {
+  
+    outline: none;
+    border: 1px solid #e6ba3e;
+    background-color: #d4863c;
+ font-size:20px;
+  padding:10px;
+  cursor:pointer;
+  
+}
+ .icon{
+  text-align:center;
+}
+ .sym{
+  padding-left:40px;
+}
+ .fotter1{
+  background-color:#583e11;
+
+ }
+
+.fotter2{
+  padding: 20px;
+    background-color: #b97f3c;
+    text-align:center;
+   font-family: 'Merriweather Sans', sans-serif; 
+   font-size:25px;
+}
+
+ h6{
+  color:white;
+  font-size:25px;
+  text-align:center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+ </style>
+</head>
+<body>
+
+<div class="header">
+              <div class="col-s-12 col-12 header">
+                     <h1>Corona Vaccine</h1>
+               </div>
+ </div>
+
+   <div class="slideshow">
+                         <div class="col-s-12 col-12 center">
+
+		<div class="slides fade">
+   
+
+			<img src="1.jpg"style="width:100%">
+		</div>
+
+		<div class="slides fade">
+			<img src="2.jpg"style="width:100%">
+		</div>
+
+
+		<div class="slides fade">
+			<img src="3.jpg"style="width:100%">
+		</div>
+
+
+		    <a class="prev" id="prev" >&#10094;</a>
+		<a class="next" id="next" >&#10095;</a>
+
+
+
+                         </div>
+                    
+	</div>
+
+             <div class="about">
+       <div class="col-s-12 col-12 abouth1">
+          <h1>About Corona Virus</h1>
+        </div>
+      <div class="col-s-8 col-8">
+ 
+
+    <p>A coronavirus is a kind of common virus that causes an infection in your nose  sinuses  or upper throat. Most coronaviruses aren t dangerous.
+
+In early 2020  after a December 2019 outbreak in China the World Health Organization identified SARS CoV 2 as a new type of coronavirus. The outbreak quickly spread around the world.
+COVID-19 is a disease caused by SARS CoV 2 that can trigger what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses nose and throat) or lower respiratory tract (windpipe and lungs).
+It spreads the same way other coronaviruses do mainly through person-to-person contact. Infections range from mild to deadly.
+SARS CoV 2 is one of seven types of coronavirus including the ones that cause severe diseases like Middle East respiratory syndrome (MERS) and sudden acute respiratory syndrome (SARS). The other coronaviruses cause most of the colds that affect us during the year but aren’t a serious threat for otherwise healthy people.</p>
+     </div>
+   
+        <div class="col-s-4 col-4 img">
+             <img src="4.jpg">
+     </div>
+  </div>
+
+    <div class="symtoms">
+          <div class="col-s-12 col-12 sym">
+              <h5>Symptoms of COVID-19</h5>
+                
+              <div class="col-s-4 col-4">
+               <h4>1) Fever</h4> 
+             <h4>2) Coughing</h4>
+            <h4> 3)Shortness of breath</h4>
+           <h4>4)Trouble breathing</h4>
+          </div>
+            <div class="col-s-4 col-4">
+           <h4>5) Fatigue</h4>
+          <h4> 6) Chills, sometimes with shaking</h4>
+            <h4>7) Body aches</h4>
+         <h4> 8) Headache</h4>
+        </div>
+           <div class="col-s-4 col-4">
+               
+           <h4>9) Sore throat</h4>
+           <h4>10) Congestion/runny nose</h4>
+            <h4>11) Loss of smell or taste</h4>
+          <h4>12)  Nausea</h4>
+           <h4>13) Diarrhea</h4>
+             
+         </div>
+   </div>
+      </div>         
+      
+   <div class="coronaform">
+               <div class="col-l-12 col-12">
+                <h3>Corona Online Form</h3>
+                </div>
+                  <div class="col-l-12 col-12 label">
+           <form>
+         
+               <label> First Name</label><br>
+                <input type="text"placeholder="enter a first name"><br><br>
+                    <label> Last  Name</label><br><br>
+                <input type="text"placeholder="enter a last name"><br><br>
+                  <label>Phone Number</label><br><br>
+                <input type="text"placeholder="enter a phone number"><br><br>
+
+                    <label>Email</label><br><br>
+                <input type="text"placeholder="enter a email"><br><br>
+                <label>Password</label><br><br>
+                <input type="password"placeholder="enter a password"><br><br>
+                   <button id="submit">Submit</button>
+            
+          </form>
+     </div>
+  </div>
+
+
+      <div class="col-s-12 col-12 fotter1">
+          <div class="fotter">
+     
+         <div class="col-s-4 col-4">
+            <h6>Location</h6>
+              <img src="1.png">
+         </div>
+               <div class="col-s-4 col-4">
+              <h6>Message</h6>
+           <textarea rows="16" cols="57" name="comment" form="usrform">
+          Enter text here...</textarea>
+                  
+         </div>
+          <div class="col-s-4 col-4 icon">
+             <h6>Share Us</h6>
+              <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter-square"></i>
+             <i class="fa fa-instagram"></i><br><br>
+         
+               <button id="btn">Suscribe</button> 
+         </div>
+       </div>
+    </div>
+
+     
+
+   <div class="col-s-12 col-12 fotter2">
+       CopyRight&copy:2021 All Rights Reserved
+   </div>
+ 
+
+  <script>
+
+   function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+      
+		var currentSlide = 1;
+
+
+		function showSlides(n){
+
+			var slides = document.getElementsByClassName("slides");
+		
+			for(var i = 0; i<slides.length; i++){
+
+				slides[i].style.display = "none";
+
+			}
+
+
+			slides[n - 1].style.display = "block";
+			
+
+		}
+
+
+		showSlides(1);
+
+
+
+
+		document.getElementById("prev").addEventListener("click", function(){
+
+			
+			currentSlide -= 1;			
+
+			if (currentSlide <= 0 ){
+				currentSlide = 3;
+			}
+
+
+
+			showSlides(currentSlide);
+
+
+		});
+
+		document.getElementById("next").addEventListener("click", function(){
+
+			currentSlide += 1;	
+
+
+			if (currentSlide >= 3 ){
+				currentSlide = 1;
+			}
+
+			showSlides(currentSlide);
+		
+
+		});
+
+
+		function changeSlide(){
+
+			currentSlide += 1;	
+
+
+			if (currentSlide >= 3 ){
+				currentSlide = 1;
+
+			}
+
+			if (currentSlide <= 0 ){
+				currentSlide = 3;
+			}
+
+
+			showSlides(currentSlide);
+		
+
+			
+
+		}
+
+
+
+		setInterval(changeSlide, 3000);
+
+
+
+  document.getElementById("submit").addEventListener("click", function(){
+  
+alert("Thanku For Submit");
+});
+
+    document.getElementById("btn").addEventListener("click", function(){
+  
+alert("Thanku For Suscribe");
+});
+
+</script>         
+
+</body>
+</html>
